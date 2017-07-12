@@ -12,16 +12,62 @@
 
       <div class="main">
         <h1>Upcoming Events:</h1>
-        {% if upcoming_event_list %}
-          <ul>
-          {% for event in upcoming_event_list %}
-            <li> {{event.event_title}} </li>
+        {% if events_row1 %}
+          
+            <div class="row">
+          {% for event in events_row1 %}
+                <!-- Card Projects -->
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-image">
+                            <img class="img-responsive" src="http://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7TDlCYzRROE84YWM/materialdesign_introduction.png">
+                            <span class="card-title">Festival</span>
+                        </div>
+                        
+                        <div class="card-content">
+                            <p> {{event.event_title}} </p>
+                        </div>
+                        
+                        <div class="card-action">
+                            <a href="#" target="new_blank">Link</a>
+                            <a href="#" target="new_blank">Link</a>
+                            <a href="#" target="new_blank">Link</a>
+                            <a href="#" target="new_blank">Link</a>
+                            <a href="#" target="new_blank">Link</a>
+                        </div>
+                    </div>
+                </div>
           {% endfor %}
-          </ul>
+          </div>
+          <div class="row">
+          {% for event in events_row2 %}
+          <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-image">
+                            <img class="img-responsive" src="http://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7TDlCYzRROE84YWM/materialdesign_introduction.png">
+                            <span class="card-title">Festival</span>
+                        </div>
+                        
+                        <div class="card-content">
+                            <p> {{event.event_title}} </p>
+                        </div>
+                        
+                        <div class="card-action">
+                            <a href="#" target="new_blank">Link</a>
+                            <a href="#" target="new_blank">Link</a>
+                            <a href="#" target="new_blank">Link</a>
+                            <a href="#" target="new_blank">Link</a>
+                            <a href="#" target="new_blank">Link</a>
+                        </div>
+                    </div>
+                </div>
+
+          {% endfor %}
+          </div>
         {% else %}
           <p>Check back later for upcoming events</p>
         {% endif %}
-      </div>
+      </div> <!-- /main -->
 
     </div><!-- /.container -->
 </body>

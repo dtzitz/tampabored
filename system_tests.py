@@ -22,9 +22,10 @@ class NewVisitorTest(unittest.TestCase):
 #should contain list of events
 #events should be organized by type
 #events should be in order of start date
-#events that have ended should not appear
+    #in progress events should be differntiated 
+    #events that have ended should not appear
 #should contain at least one article
-
+# https://www.quora.com/What-are-all-the-keywords-for-the-new-Google-Calendar-Android-app-that-will-generate-those-beautiful-images-in-the-agenda-view
 
 if __name__ == '__main__':  
     unittest.main(warnings='ignore')
