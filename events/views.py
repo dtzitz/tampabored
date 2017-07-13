@@ -8,8 +8,8 @@ from .models import Event
 
 def index(request):
     now = timezone.now()
-    events_row1 = Event.objects.filter(event_end_date__lte=now).order_by('event_start_date')[:2]
-    events_row2 = Event.objects.order_by('event_start_date')[2:3]
+    events_row1 = Event.objects.filter(end_date__gte=now).order_by('start_date')[:2]
+    events_row2 = Event.objects.filter(end_date__gte=now).order_by('start_date')[2:3]
     context = {
         'events_row1': events_row1,
         'events_row2': events_row2,
