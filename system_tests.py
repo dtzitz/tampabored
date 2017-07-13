@@ -19,6 +19,7 @@ class NewVisitorTest(unittest.TestCase):
         self.tearDown()
 
 #should contain cards with event info
+    #if no cards then it should say check back later
 #should contain list of events
 #events should be organized by type
 #events should be in order of start date
