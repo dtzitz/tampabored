@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block content %}
+
+<!--custom css-->
+<link rel="stylesheet" type="text/css" href="{% static 'homepage.css' %}" />
+
+<body>
+    <div class="container">
+        <div class="main">
+            <div class="row">
+                {{event.title}}
+            </div>
+        </div>
+    </div>
+</body>
+
+
+
+{% endblock %}

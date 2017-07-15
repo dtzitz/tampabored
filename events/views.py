@@ -1,5 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from django.utils import timezone
+from django.views import generic
 
 # Create your views here.
 from django.http import HttpResponse
@@ -15,3 +16,7 @@ def index(request):
         'events_row2': events_row2,
         }
     return render(request, 'index.html', context)
+
+class DetailView(generic.DetailView):
+    model = Event
+    template_name = 'detail.html'
