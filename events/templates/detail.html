@@ -3,17 +3,25 @@
 
 {% block content %}
 
+<style>
+    .event-image{
+        background-image: url('https://res.cloudinary.com/dtzitz/image/upload/v1467559739/ZAV28Zd_nkcbls.jpg');
+    }
+</style>
+
 <!--custom css-->
 <link rel="stylesheet" type="text/css" href="{% static 'homepage.css' %}" />
 
 <body>
+    <div class="container-fluid event-image"></div>
     <div class="container">
-        <div class="main">
-            <div class="row">
-                {{event.title}}
-            </div>
-        </div>
+        <div class="row">
+        <h1 event-detail-title> {{event.title}} </h1>
     </div>
+    </div>
+    
+        
+
 </body>
 
 
