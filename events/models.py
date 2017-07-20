@@ -17,9 +17,9 @@ class Event(models.Model):
     category = models.CharField(
         max_length = 50,
         choices = (
-            ('CON', 'Concert'),
-            ('FEST', 'Festival'),
-            ('MISC', 'Misc')
+            ('Concert', 'CON'),
+            ('Festival', 'FEST'),
+            ('Miscellaneous', 'MISC')
         ),
         default = 'misc'
     )
