@@ -19,6 +19,7 @@ class Event(models.Model):
         choices = (
             ('Concert', 'CON'),
             ('Festival', 'FEST'),
+            ('Kids', 'KIDS'),
             ('Miscellaneous', 'MISC')
         ),
         default = 'misc'
