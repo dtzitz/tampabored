@@ -20,7 +20,21 @@
                 <div class="col-md-6">
                     <div class="card">
                         <div class="card-image">
-                            <img class="img-responsive" src="http://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7TDlCYzRROE84YWM/materialdesign_introduction.png">
+                            {% if event.category == "Miscellaneous" %}
+                            <img class="img-responsive " src="https://ssl.gstatic.com/tmly/f8944938hffheth4ew890ht4i8/flairs/xxhdpi/img_beer.jpg">
+                            {% endif %}
+                            
+                            {% if event.category == "Concert" %}
+                            <img class="img-responsive " src="https://ssl.gstatic.com/tmly/f8944938hffheth4ew890ht4i8/flairs/xxhdpi/img_concert.jpg">
+                            {% endif %}
+
+                            {% if event.category == "Kids" %}
+                            <img class="img-responsive " src="https://ssl.gstatic.com/tmly/f8944938hffheth4ew890ht4i8/flairs/xxhdpi/img_art.jpg">
+                            {% endif %}
+
+                            {% if event.category == "Festival" %}
+                            <img class="img-responsive " src="https://ssl.gstatic.com/tmly/f8944938hffheth4ew890ht4i8/flairs/xxhdpi/img_beer.jpg">
+                            {% endif %}
                             <span class="card-title"></span>
                         </div>
                         
