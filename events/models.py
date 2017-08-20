@@ -8,6 +8,7 @@ class Event(models.Model):
     summary = models.TextField(default='Hodor') 
     start_date = models.DateTimeField('start date')
     end_date = models.DateTimeField('end date')
+    event_site = models.URLField(default='#')
     category = models.CharField(
         max_length = 50,
         choices = (
