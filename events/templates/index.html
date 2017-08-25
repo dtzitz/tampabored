@@ -11,7 +11,7 @@
     <div class="container">
 
       <div class="main">
-        <h1>Upcoming Events:</h1>
+        <h1>TampaBored</h1>
         {% if events_row1 %}
           
             <div class="row">
@@ -46,8 +46,8 @@
                         
                         <div class="card-action">
                             <a href="{% url 'detail' event.id %}"><button type="button" class="btn btn-default"> Details </button>  </a> 
-                            <a href="#" target="new_blank"><button type="button" class="btn btn-info"> Tweet </button></a>
-                            <a href="#" target="new_blank"><button type="button" class="btn btn-primary"> FB </button></a>
+                             
+                              
                         </div>
                     </div>
                 </div>
@@ -83,14 +83,49 @@
                         
                         <div class="card-action">
                             <a href="{% url 'detail' event.id %}"><button type="button" class="btn btn-default"> Details </button>  </a> 
-                            <a href="#" target="new_blank"><button type="button" class="btn btn-info"> Tweet </button></a>
-                            <a href="#" target="new_blank"><button type="button" class="btn btn-primary"> FB </button></a>
+                             
+                              
                         </div>
                     </div>
                 </div>
 
           {% endfor %}
           </div>
+          <div class="row">
+            {% for event in events_row3 %}
+            <div class="col-md-6">
+                      <div class="card">
+                          <div class="card-image">
+                              {% if event.category == "Miscellaneous" %}
+                              <img class="img-responsive " src="https://ssl.gstatic.com/tmly/f8944938hffheth4ew890ht4i8/flairs/xxhdpi/img_beer.jpg">
+                              {% endif %}
+                              
+                              {% if event.category == "Concert" %}
+                              <img class="img-responsive " src="https://ssl.gstatic.com/tmly/f8944938hffheth4ew890ht4i8/flairs/xxhdpi/img_concert.jpg">
+                              {% endif %}
+  
+                              {% if event.category == "Kids" %}
+                              <img class="img-responsive " src="https://ssl.gstatic.com/tmly/f8944938hffheth4ew890ht4i8/flairs/xxhdpi/img_art.jpg">
+                              {% endif %}
+  
+                              {% if event.category == "Festival" %}
+                              <img class="img-responsive " src="https://ssl.gstatic.com/tmly/f8944938hffheth4ew890ht4i8/flairs/xxhdpi/img_beer.jpg">
+                              {% endif %}
+                              <span class="card-title"></span>
+                          </div>
+                          
+                          <div class="card-content">
+                              <p> {{event.title}} </p>
+                          </div>
+                          
+                          <div class="card-action">
+                              <a href="{% url 'detail' event.id %}"><button type="button" class="btn btn-default"> Details </button>  </a> 
+                          </div>
+                      </div>
+                  </div>
+  
+            {% endfor %}
+            </div>
         {% else %}
           <p>Check back later for upcoming events</p>
         {% endif %}

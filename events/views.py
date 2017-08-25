@@ -11,9 +11,11 @@ def index(request):
     now = timezone.now()
     events_row1 = Event.objects.filter(end_date__gte=now).order_by('start_date')[:2]
     events_row2 = Event.objects.filter(end_date__gte=now).order_by('start_date')[2:3]
+    events_row3 = Event.objects.filter(end_date__gte=now).order_by('start_date')[3:4]
     context = {
         'events_row1': events_row1,
         'events_row2': events_row2,
+        'events_row3': events_row3,
         }
     return render(request, 'index.html', context)
 
