@@ -19,22 +19,8 @@
                 <!-- Card Projects -->
                 <div class="col-md-6">
                     <div class="card">
-                        <div class="card-image">
-                            {% if event.category == "Miscellaneous" %}
-                            <img class="img-responsive " src="https://ssl.gstatic.com/tmly/f8944938hffheth4ew890ht4i8/flairs/xxhdpi/img_beer.jpg">
-                            {% endif %}
-                            
-                            {% if event.category == "Concert" %}
-                            <img class="img-responsive " src="https://ssl.gstatic.com/tmly/f8944938hffheth4ew890ht4i8/flairs/xxhdpi/img_concert.jpg">
-                            {% endif %}
-
-                            {% if event.category == "Kids" %}
-                            <img class="img-responsive " src="https://ssl.gstatic.com/tmly/f8944938hffheth4ew890ht4i8/flairs/xxhdpi/img_art.jpg">
-                            {% endif %}
-
-                            {% if event.category == "Festival" %}
-                            <img class="img-responsive " src="https://res.cloudinary.com/dtzitz/image/upload/v1467560008/AOjKtQy_jxytxw.jpg">
-                            {% endif %}
+                        <div class="card-image">                            
+                            <img class="img-responsive center-block" src="{{event.image_url}}">
                             <span class="card-title"></span>
                         </div>
                         
@@ -59,21 +45,7 @@
           <div class="col-md-6">
                     <div class="card">
                         <div class="card-image">
-                            {% if event.category == "Miscellaneous" %}
-                            <img class="img-responsive " src="https://ssl.gstatic.com/tmly/f8944938hffheth4ew890ht4i8/flairs/xxhdpi/img_beer.jpg">
-                            {% endif %}
-                            
-                            {% if event.category == "Concert" %}
-                            <img class="img-responsive " src="https://ssl.gstatic.com/tmly/f8944938hffheth4ew890ht4i8/flairs/xxhdpi/img_concert.jpg">
-                            {% endif %}
-
-                            {% if event.category == "Kids" %}
-                            <img class="img-responsive " src="https://ssl.gstatic.com/tmly/f8944938hffheth4ew890ht4i8/flairs/xxhdpi/img_art.jpg">
-                            {% endif %}
-
-                            {% if event.category == "Festival" %}
-                            <img class="img-responsive " src="https://ssl.gstatic.com/tmly/f8944938hffheth4ew890ht4i8/flairs/xxhdpi/img_beer.jpg">
-                            {% endif %}
+                            <img class="img-responsive center-block" src="{{event.image_url}}">
                             <span class="card-title"></span>
                         </div>
                         
@@ -96,21 +68,7 @@
             <div class="col-md-6">
                       <div class="card">
                           <div class="card-image">
-                              {% if event.category == "Miscellaneous" %}
-                              <img class="img-responsive " src="https://ssl.gstatic.com/tmly/f8944938hffheth4ew890ht4i8/flairs/xxhdpi/img_beer.jpg">
-                              {% endif %}
-                              
-                              {% if event.category == "Concert" %}
-                              <img class="img-responsive " src="https://ssl.gstatic.com/tmly/f8944938hffheth4ew890ht4i8/flairs/xxhdpi/img_concert.jpg">
-                              {% endif %}
-  
-                              {% if event.category == "Kids" %}
-                              <img class="img-responsive " src="https://ssl.gstatic.com/tmly/f8944938hffheth4ew890ht4i8/flairs/xxhdpi/img_art.jpg">
-                              {% endif %}
-  
-                              {% if event.category == "Festival" %}
-                              <img class="img-responsive " src="https://ssl.gstatic.com/tmly/f8944938hffheth4ew890ht4i8/flairs/xxhdpi/img_beer.jpg">
-                              {% endif %}
+                              <img class="img-responsive center-block" src="{{event.image_url}}">
                               <span class="card-title"></span>
                           </div>
                           
