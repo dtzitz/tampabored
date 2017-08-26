@@ -9,7 +9,11 @@
 <script type="text/javascript" src="{% static "details.js" %}" ></script>
 
 <body>
-    <div class="container-fluid event-image"></div>
+    <div class="event-image">
+        <div class="row">
+            <img class="img-responsive center-block" src=" {{event.image_url}} ">
+        </div>
+    </div>
     <div class="container">
         <div class="row">
         <h1> {{event.title}} </h1>
