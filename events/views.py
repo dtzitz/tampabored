@@ -1,5 +1,7 @@
 from django.shortcuts import render, get_object_or_404
-from django.utils import timezone
+# from django.utils import timezone
+import pytz
+from datetime import datetime
 from django.views import generic
 
 # Create your views here.
@@ -8,7 +10,9 @@ from django.http import HttpResponse
 from .models import Event
 
 def index(request):
-    now = timezone.now()
+    # now = timezone.now('America/New_York')
+    now = datetime.now(pytz.timezone('US/Eastern'))
+    print(now)
     events_row1 = Event.objects.filter(end_date__gte=now).order_by('start_date')[:2]
     events_row2 = Event.objects.filter(end_date__gte=now).order_by('start_date')[2:3]
     events_row3 = Event.objects.filter(end_date__gte=now).order_by('start_date')[3:4]
