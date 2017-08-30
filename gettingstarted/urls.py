@@ -13,6 +13,7 @@ import events.views
 urlpatterns = [
     url(r'^events/', include('events.urls')),
     url(r'^$', events.views.index, name='index'),
+    url(r'^contact/', events.views.contact, name='contact'),
     # url(r'^$', hello.views.index, name='index'),
     url(r'^db', hello.views.db, name='db'),
     url(r'^admin/', include(admin.site.urls)),
