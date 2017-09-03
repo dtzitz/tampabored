@@ -2,7 +2,25 @@
 {% load staticfiles %}
 
 {% block content %}
+<link rel="stylesheet" type="text/css" href="{% static 'homepage.css' %}" />
 
-<h1>Contact</h1>
+<body>
+    <div class="container">
+        <div class="main">
+            <div class="row">
+                <div class="col-md-3">
+                    <h1>Twitter</h1>  
+                </div>
+                <div class="col-md-3">
+                    <h1>Facebook</h1>
+                </div>
+                <div class="col-md-3">
+                    <h1>email?</h1>
+                </div>
+            </div>
+        </div>
+    </div>    
+</body>
+
 
 {% endblock %}
