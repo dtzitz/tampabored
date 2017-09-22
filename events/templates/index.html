@@ -14,7 +14,7 @@
         <img class="img img-fluid" src="https://res.cloudinary.com/dtzitz/image/upload/v1505587306/TampaBoredLogo_pfwpcx.jpg" alt="seagull logo">
         {% if events_row1 %}
           
-            <div class="row">
+        <div class="row">
           {% for event in events_row1 %}
                 <!-- Card Projects -->
                 <div class="col-md-6">
@@ -68,22 +68,25 @@
           <div class="row">
             {% for event in events_row3 %}
             <div class="col-md-6">
-                      <div class="card">
-                          <div class="card-image">
-                              <img class="img-responsive center-block" src="{{event.image_url}}">
-                              <span class="card-title"></span>
-                          </div>
+                <div class="card">
+                    <div class="card-image">                            
+                        <img class="img-responsive center-block" src="{{event.image_url}}">
+                        <span class="card-title"></span>
+                    </div>
+                    
+                    <div class="card-content">
+                        <h1 class="event-title"> {{event.title}} </h1>
+                        <p class="event-start"> Starts: {{event.start_date}} </p>
+                        <p class="event-end"> Ends: {{event.end_date}} </p>
+                    </div>
+                    
+                    <div class="card-action">
+                        <a href="{% url 'detail' event.id %}"><button type="button" class="btn btn-default"> Details </button>  </a> 
+                         
                           
-                          <div class="card-content">
-                              <p> {{event.title}} </p>
-                          </div>
-                          
-                          <div class="card-action">
-                              <a href="{% url 'detail' event.id %}"><button type="button" class="btn btn-default"> Details </button>  </a> 
-                          </div>
-                      </div>
-                  </div>
-  
+                    </div>
+                </div>
+            </div>
             {% endfor %}
             </div>
         {% else %}

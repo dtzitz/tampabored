@@ -11,8 +11,8 @@ from .models import Event
 def index(request):
     now = datetime.now(pytz.timezone('US/Eastern'))
     events_row1 = Event.objects.filter(end_date__gte=now).order_by('start_date')[:2]
-    events_row2 = Event.objects.filter(end_date__gte=now).order_by('start_date')[2:3]
-    events_row3 = Event.objects.filter(end_date__gte=now).order_by('start_date')[3:4]
+    events_row2 = Event.objects.filter(end_date__gte=now).order_by('start_date')[2:4]
+    events_row3 = Event.objects.filter(end_date__gte=now).order_by('start_date')[4:6]
     context = {
         'events_row1': events_row1,
         'events_row2': events_row2,
