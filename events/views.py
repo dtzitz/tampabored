@@ -26,3 +26,9 @@ class DetailView(generic.DetailView):
 
 def contact(request):
     return render(request, 'contact.html')
+
+def all(request):
+    now = datetime.now(pytz.timezone('US/Eastern'))
+    elist = Event.objects.filter(end_date__gte=now).order_by('start_date')
+    context = {'event_list': elist}
+    return render(request,'elist.html', context)
