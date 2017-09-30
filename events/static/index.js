@@ -1,3 +1,3 @@
-document.onreadystatechange = function (){
+// document.onreadystatechange = function (){
     
-}
+// }
