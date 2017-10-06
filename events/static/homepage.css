@@ -1,6 +1,11 @@
 .main {
+  font-family: 'Quicksand', sans-serif;
   padding: 100px 15px;
   text-align: center;
+}
+
+h1{
+  font-family: 'Pacifico', cursive;
 }
 
 .event-detail-title{
@@ -80,3 +85,6 @@
   text-decoration: none;
 }
 
+li{
+  list-style: none;
+}
