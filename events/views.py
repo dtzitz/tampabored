@@ -7,6 +7,7 @@ from django.views import generic
 from django.http import HttpResponse
 
 from .models import Event
+from .models import RecurringEvent
 
 def index(request):
     now = datetime.now(pytz.timezone('US/Eastern'))
@@ -28,7 +29,6 @@ def contact(request):
     return render(request, 'contact.html')
 
 def recurring(request):
-    # now = datetime.now(pytz.timezone('US/Eastern'))
-    # elist = Event.objects.filter(end_date__gte=now).order_by('start_date')
-    # context = {'event_list': elist}
-    return render(request,'recurring.html')
+    recurring_events_list = RecurringEvent.objects.order_by('isOnWeekend')
+    context = {'recurring_events_list': recurring_events_list}
+    return render(request,'recurring.html', context)

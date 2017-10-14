@@ -20,3 +20,14 @@ class Event(models.Model):
         ),
         default = 'Miscellaneous'
     )
+
+class RecurringEvent(models.Model):
+    title = models.CharField(max_length=100)
+    summary = models.CharField(default='100 char max', max_length=100)
+    website = models.URLField(default='#')
+    image = models.URLField(default='#')
+    days = models.CharField(max_length=25)
+    isOnWeekend = models.BooleanField(default=True)
+    startTime = models.TimeField
+    endTime = models.TimeField
+    
