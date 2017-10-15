@@ -28,6 +28,4 @@ class RecurringEvent(models.Model):
     image = models.URLField(default='#')
     days = models.CharField(max_length=25)
     isOnWeekend = models.BooleanField(default=True)
-    startTime = models.TimeField
-    endTime = models.TimeField
     

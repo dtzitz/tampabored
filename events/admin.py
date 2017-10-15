@@ -10,7 +10,7 @@ class EventAdmin(admin.ModelAdmin):
     list_display = ('title','start_date', 'end_date', 'category')
 
 class RecurringEventAdmin(admin.ModelAdmin):
-    fields = ['title', 'summary', 'website', 'image', 'days', 'isOnWeekend', 'startTime', 'endTime']
+    fields = ['title', 'summary', 'website', 'image', 'days', 'isOnWeekend']
     list_display = ('title', 'summary')
 
 admin.site.register(RecurringEvent, RecurringEventAdmin)

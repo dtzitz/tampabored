@@ -23,11 +23,6 @@
 
             {% for event in recurring_events_list %}
 
-            {{event.title}}
-
-            {% endfor %}
-
-
             <div class="row">
                 <div class="col-sm-8 col-sm-offset-2">
                     <ul class="event-list">
@@ -35,21 +30,23 @@
                             
                                 <time>
                                     <!-- <span class="day">Friday, Saturday, Sunday</span> -->
-                                    <span class="month">Fri, Sat, Sun</span>
+                                    <span class="month">{{event.days}}</span>
                                     <!-- <span class="year">2014</span> -->
-                                    <span class="time">ALL DAY</span>
                                 </time>
-                                    <img alt="Independence Day" src="https://farm4.staticflickr.com/3100/2693171833_3545fb852c_q.jpg" />
+                                    <img alt="{{event.title}}" src="{{event.image}}" />
                                     <div class="info">
-                                        <h2 class="title">Independence Day</h2>
-                                        <p class="desc">This field should be limited to exactly 100 characters.</p>
-                                        <p class="desc"><a href="#">Website</a></p>
+                                        <h2 class="title"> {{event.title}} </h2>
+                                        <p class="desc"> {{event.summary}} </p>
+                                        <p class="desc"><a href="{{event.website}}">Website</a></p>
                                     </div>
                             
                         </li>
                     </ul>
                 </div>
             </div>
+
+            {% endfor %}
+
             
         </div>
     </div>    
